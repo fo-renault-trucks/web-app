@@ -1,0 +1,119 @@
+@import "../../../../styles";
+
+header {
+  position: sticky;
+
+  top: 0;
+
+  z-index: 1000;
+
+  border-bottom: 1px solid $primary-color;
+}
+
+.container {
+  padding: 0 1em;
+
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand-container {
+  display: flex;
+
+  align-items: center;
+
+  gap: 1.5rem;
+}
+
+.brand {
+  padding: 1rem;
+
+  border-radius: 10%;
+
+  background-color: $secondary-color;
+
+  color: white;
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+
+  gap: 1rem;
+
+  list-style: none;
+}
+
+a {
+  position: relative;
+
+  display: inline-block;
+
+  font-family: FiraSansExtraCondensed, "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-link {
+  color: $secondary-color;
+}
+
+.nav-link:after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -12px;
+
+  width: 0;
+  height: 4px;
+
+  background-color: $primary-color;
+
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: $primary-color;
+
+  &:after {
+    width: 100%;
+  }
+}
+
+.login-link {
+  padding: 0.8rem;
+
+  border-radius: 5px;
+
+  background-color: $primary-color;
+  color: white;
+}
+
+.login-link:hover {
+  background-color: darken($primary-color, 10%);
+}
+
+@media (max-width: 768px) {
+  header {
+    border-bottom: none;
+  }
+
+  .container {
+    justify-content: center;
+
+    gap: 1rem;
+  }
+
+  .brand {
+    display: none;
+  }
+}

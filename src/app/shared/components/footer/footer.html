@@ -1,0 +1,23 @@
+<footer>
+  <div class="container">
+    <div class="brand">
+      <span>{{ brand }}</span>
+    </div>
+
+    <nav aria-label="Footer navigation">
+      <ul class="nav-list">
+        @for (route of routes; track route) {
+          <li><a routerLink="{{ route.path }}" class="nav-link">{{ route.label }}</a></li>
+        }
+      </ul>
+    </nav>
+
+    <div class="copy">
+      &copy; 2010-{{ currentYear }} {{ brand }}. Tous droits réservés.
+    </div>
+  </div>
+
+  <div class="authors">
+    Réalisé par : Juan Valero et Nicolas Erceau
+  </div>
+</footer>
